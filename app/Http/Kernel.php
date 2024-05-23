@@ -68,5 +68,6 @@ class Kernel extends HttpKernel
         'tautan_role' => \App\Http\Middleware\CheckTautanRole::class,
         'berita_role' => \App\Http\Middleware\CheckBeritaRole::class,
 
+
     ];
 }

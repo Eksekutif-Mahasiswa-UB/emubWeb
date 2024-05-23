@@ -52,3 +52,4 @@ Route::get('/lihatBerita/{judul}', [BeritaController::class, 'search']);
 
 
 
+
