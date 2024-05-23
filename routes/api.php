@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthenticationController;
 use App\Http\Controllers\TautanController;
+use App\Http\Controllers\BeritaController;
+
 
 
 
@@ -36,6 +38,15 @@ Route::post('/tambahTautan', [TautanController::class, 'store'])->middleware(['a
 Route::post('/updateTautan/{id}', [TautanController::class, 'update'])->middleware(['auth:sanctum', 'tautan_role']);
 Route::delete('/lihatTautan/{idTautan}', [TautanController::class, 'delete'])->middleware(['auth:sanctum', 'tautan_role']);
 Route::get('/lihatTautan', [TautanController::class, 'show']);
+
+//Berita
+Route::post('/tambahBerita', [BeritaController::class, 'store'])->middleware(['auth:sanctum', 'berita_role']);
+Route::post('/updateBerita/{id}', [BeritaController::class, 'update'])->middleware(['auth:sanctum', 'berita_role']);
+Route::delete('/deleteBerita/{id}', [BeritaController::class, 'delete'])->middleware(['auth:sanctum', 'berita_role']);
+Route::get('/lihatBerita', [BeritaController::class, 'show']);
+Route::get('/lihatBerita/{judul}', [BeritaController::class, 'search']);
+
+
 
 
 
