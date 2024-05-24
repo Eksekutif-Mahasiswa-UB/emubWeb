@@ -14,20 +14,33 @@ class BeritaController extends Controller
         $validated = $request->validate([
             'judul' => 'required',
             'informasi' => 'required',
-            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Validasi file gambar
-        ]); 
-    
-        $gambarPath = $request->file('gambar')->store('gambar', 'public');
-    
+            'gambar' => 'required',
+            'gambar.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validate multiple image files
+        ]);
+
+        $gambarPaths = [];
+        if ($request->hasFile('gambar')) {
+            foreach ($request->file('gambar') as $gambar) {
+                $path = $gambar->store('gambar', 'public');
+                if ($path) {
+                    $gambarPaths[] = $path;
+                } else {
+                    return response()->json(['error' => 'File upload failed'], 500);
+                }
+            }
+        } else {
+            return response()->json(['error' => 'No images uploaded'], 400);
+        }
+
         $validated['idAdmin'] = Auth::id();
-        
+
         $berita = Berita::create([
             'judul' => $validated['judul'],
             'informasi' => $validated['informasi'],
-            'gambar' => $gambarPath, // Menyimpan path file gambar di database
+            'gambar' => json_encode($gambarPaths), // Store image paths as JSON
             'idAdmin' => $validated['idAdmin'],
         ]);
-        
+
         return response()->json(['message' => 'Upload successfully.']);
     }
 
@@ -36,27 +49,38 @@ class BeritaController extends Controller
         $validated = $request->validate([
             'judul' => 'required',
             'informasi' => 'required',
-            'gambar' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'gambar' => 'nullable',
+            'gambar.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-        
+
         $berita = Berita::findOrFail($id);
 
         if ($berita->idAdmin !== Auth::id() && Auth::user()->role !== 'admin') {
             return response()->json(['error' => 'Unauthorized'], 403);
         }
 
+        $gambarPaths = json_decode($berita->gambar, true);
         if ($request->hasFile('gambar')) {
-            if ($berita->gambar) {
-                Storage::disk('public')->delete($berita->gambar);
+            if ($gambarPaths) {
+                foreach ($gambarPaths as $path) {
+                    Storage::disk('public')->delete($path);
+                }
             }
-            $gambarPath = $request->file('gambar')->store('gambar', 'public');
-            $validated['gambar'] = $gambarPath;
+            $gambarPaths = [];
+            foreach ($request->file('gambar') as $gambar) {
+                $path = $gambar->store('gambar', 'public');
+                if ($path) {
+                    $gambarPaths[] = $path;
+                } else {
+                    return response()->json(['error' => 'File upload failed'], 500);
+                }
+            }
         }
 
         $berita->update([
             'judul' => $validated['judul'],
             'informasi' => $validated['informasi'],
-            'gambar' => $validated['gambar'] ?? $berita->gambar,
+            'gambar' => json_encode($gambarPaths) ?? $berita->gambar,
             'idAdmin' => Auth::id(),
         ]);
 
