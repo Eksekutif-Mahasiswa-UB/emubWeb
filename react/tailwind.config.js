@@ -12,6 +12,8 @@ export default {
         skyBlue: "#D6DAF7",
         tealBlue: "#007B8E",
         paleSalmon: "#ECD7CD",
+        navbarText: "#00094D",
+        white : "#ffffff"
         }
         
        
@@ -19,10 +21,10 @@ export default {
       fontFamily: {
         'helvetica-extraBold': ['Helvetica ExtraBold', 'serif'],
         'helvetica-regular': ['Helvetica Regular', 'serif'],
-        
+        'black-signature': ['Black Signature', 'serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
 
