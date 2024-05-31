@@ -15,15 +15,15 @@ class BeritaController extends Controller
             'judul' => 'required',
             'informasi' => 'required',
             'gambar' => 'required',
-            'gambar.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validate multiple image files
+            'gambar.*' => 'image|mimes:jpeg,png,jpg,gif|', // Validate multiple image files
         ]);
 
         $gambarPaths = [];
         if ($request->hasFile('gambar')) {
             foreach ($request->file('gambar') as $gambar) {
-                $path = $gambar->store('gambar', 'public');
+                $path = $gambar->store('public/gambar');
                 if ($path) {
-                    $gambarPaths[] = $path;
+                    $gambarPaths[] = env('APP_URL') . '/emubWeb/storage/app/public/' . str_replace('public/', '', $path);
                 } else {
                     return response()->json(['error' => 'File upload failed'], 500);
                 }
@@ -37,7 +37,7 @@ class BeritaController extends Controller
         $berita = Berita::create([
             'judul' => $validated['judul'],
             'informasi' => $validated['informasi'],
-            'gambar' => json_encode($gambarPaths), // Store image paths as JSON
+            'gambar' => json_encode($gambarPaths, JSON_UNESCAPED_SLASHES), // Store image URLs as JSON without escaped slashes
             'idAdmin' => $validated['idAdmin'],
         ]);
 
@@ -50,7 +50,7 @@ class BeritaController extends Controller
             'judul' => 'required',
             'informasi' => 'required',
             'gambar' => 'nullable',
-            'gambar.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'gambar.*' => 'image|mimes:jpeg,png,jpg,gif|',
         ]);
 
         $berita = Berita::findOrFail($id);
@@ -63,14 +63,14 @@ class BeritaController extends Controller
         if ($request->hasFile('gambar')) {
             if ($gambarPaths) {
                 foreach ($gambarPaths as $path) {
-                    Storage::disk('public')->delete($path);
+                    Storage::disk('public')->delete(str_replace(env('APP_URL') . '/emubWeb/storage/app/public/', '', $path));
                 }
             }
             $gambarPaths = [];
             foreach ($request->file('gambar') as $gambar) {
-                $path = $gambar->store('gambar', 'public');
+                $path = $gambar->store('public/gambar');
                 if ($path) {
-                    $gambarPaths[] = $path;
+                    $gambarPaths[] = env('APP_URL') . '/emubWeb/storage/app/public/' . str_replace('public/', '', $path);
                 } else {
                     return response()->json(['error' => 'File upload failed'], 500);
                 }
@@ -80,7 +80,7 @@ class BeritaController extends Controller
         $berita->update([
             'judul' => $validated['judul'],
             'informasi' => $validated['informasi'],
-            'gambar' => json_encode($gambarPaths) ?? $berita->gambar,
+            'gambar' => json_encode($gambarPaths, JSON_UNESCAPED_SLASHES) ?? $berita->gambar,
             'idAdmin' => Auth::id(),
         ]);
 
@@ -88,12 +88,15 @@ class BeritaController extends Controller
     }
 
     public function delete($id)
-    {  
+    {
         $berita = Berita::findOrFail($id);
 
         if (Auth::user()->role === 'admin') {
             if ($berita->gambar) {
-                Storage::disk('public')->delete($berita->gambar);
+                $gambarPaths = json_decode($berita->gambar, true);
+                foreach ($gambarPaths as $path) {
+                    Storage::disk('public')->delete(str_replace(env('APP_URL') . '/emubWeb/storage/app/public/', '', $path));
+                }
             }
             $berita->delete();
             return response()->json(['message' => 'Berita berhasil dihapus']);
@@ -102,7 +105,10 @@ class BeritaController extends Controller
                 return response()->json(['error' => 'Unauthorized'], 403);
             }
             if ($berita->gambar) {
-                Storage::disk('public')->delete($berita->gambar);
+                $gambarPaths = json_decode($berita->gambar, true);
+                foreach ($gambarPaths as $path) {
+                    Storage::disk('public')->delete(str_replace(env('APP_URL') . '/emubWeb/storage/app/public/', '', $path));
+                }
             }
             $berita->delete();
             return response()->json(['message' => 'Berita berhasil dihapus']);
@@ -111,14 +117,20 @@ class BeritaController extends Controller
 
     public function show()
     {
-        $berita = Berita::all();
+        $berita = Berita::all()->map(function ($item) {
+            $item->gambar = json_decode($item->gambar);
+            return $item;
+        });
         return response()->json($berita);
     }
 
     public function search($judul)
     {
         $berita = Berita::where('judul', 'like', '%' . $judul . '%')->get(['idBerita', 'judul', 'informasi', 'gambar']);
+        $berita = $berita->map(function ($item) {
+            $item->gambar = json_decode($item->gambar);
+            return $item;
+        });
         return response()->json($berita);
     }
-
 }
