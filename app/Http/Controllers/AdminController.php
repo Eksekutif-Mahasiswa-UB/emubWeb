@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -14,7 +15,11 @@ class AdminController extends Controller
             'role' => 'required'
         ]);
 
+        $validated['password'] = Hash::make($validated['password']);
+
         $admin = Admin::create($validated);
+        
+        return response()->json(['message' => 'Admin created successfully', 'admin' => $admin]);
     }
 
     public function show()

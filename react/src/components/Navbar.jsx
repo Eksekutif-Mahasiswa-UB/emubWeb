@@ -44,11 +44,11 @@ const Navbar = () => {
           ></div>
         </Link>
 
-        <button className="text-xl relative group rounded-lg font-medium bg-transparent bg-primary-tealBlue text-primary-charcoalGray border-2 py-1 px-5 border-primary-tealBlue hover:text-white duration-300 ease-in-out overflow-hidden">
+        {/* <button className="text-xl relative group rounded-lg font-medium bg-transparent bg-primary-tealBlue text-primary-charcoalGray border-2 py-1 px-5 border-primary-tealBlue hover:text-white duration-300 ease-in-out overflow-hidden">
           <h1 className="z-10 relative">EM UB Apps</h1>
 
           <div className="absolute -translate-y-1/2 top-1/2 -left-5 duration-1000 skew-x-12 w-0 group-hover:w-[calc(100%+50px)] bg-primary-tealBlue h-[calc(100%+20px)] bottom-0 z-0"></div>
-        </button>
+        </button> */}
       </ul>
       <div className="lg:hidden text-primary-charcoalGray flex flex-col justify-center items-center cursor-pointer">
         <div onClick={toggleMenu}>
@@ -83,10 +83,10 @@ const Navbar = () => {
               ></div>
             </Link>
 
-            <button className="text-base relative group rounded-lg font-medium bg-transparent bg-primary-tealBlue text-primary-charcoalGray border-2 py-1 border-primary-tealBlue hover:text-white duration-300 ease-in-out overflow-hidden mb-4">
+            {/* <button className="text-base relative group rounded-lg font-medium bg-transparent bg-primary-tealBlue text-primary-charcoalGray border-2 py-1 border-primary-tealBlue hover:text-white duration-300 ease-in-out overflow-hidden mb-4">
               <h1 className="z-10 relative">EM UB Apps</h1>
               <div className="absolute -translate-y-1/2 top-1/2 -left-5 duration-1000 skew-x-12 w-0 group-hover:w-[calc(100%+50px)] bg-primary-tealBlue h-[calc(100%+20px)] bottom-0 z-0"></div>
-            </button>
+            </button> */}
           </ul>
         </div>
       </div>

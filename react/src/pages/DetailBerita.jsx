@@ -1,10 +1,30 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../src/styles/detailBerita.css";
 import Card from "../components/detailBerita/Card";
+import { useParams } from "react-router-dom";
+import { getBeritaById} from "../api/services/berita";
 
 const DetailBerita = () => {
+    const [data,setData] =useState({});
+    const [loading,setLoading] = useState(true)
+    const {id}=useParams()
 
+    useEffect(() => {
+     const fetchData = async()=>{
+        try {
+            const response = await getBeritaById(id)
+            setData(response.data)
+            console.log(id)
+            setLoading(false)
+        } catch (error) {
+            setLoading(false)
+            console.log(id)
+        }
+     }
+     fetchData()
+    }, [id])
+    
     const dummy = [
         {
           title: 'Program Kegiatan Mahasiswa Berprestasi',
@@ -64,12 +84,9 @@ const DetailBerita = () => {
                         <div className="w-full bg-gradient-to-b px-0.5 pb-0.5 from-primary-charcoalGray rounded-b-lg to-primary-tealBlue">
                             <div className="bg-primary-white bg-paper w-full  rounded-b-lg px-2 lg:px-20">
                                 <div className="shadow-2xl w-full -mt-8 lg:-mt-10 relative z-30 p-4 lg:p-12 bg-primary-white border border-primary-charcoalGray border-opacity-15">
-                                    <div className="w-fit px-3 py-1.5 text-xs rounded-2xl mx-auto bg-primary-tealBlue text-slate-100">
-                                        LUGRI
-                                    </div>
+                                 
                                     <h1 className="lg:text-5xl text-2xl font-helvetica-extraBold w-full lg:w-5/6 mx-auto text-center mt-3 text-primary-charcoalGray">
-                                        Judul Proker Judul Proker Judul Proker
-                                        Judul Proker
+                                        {data.judul}
                                     </h1>
                                     <p className="w-fit mx-auto mt-3 text-primary-tealBlue text-xl">
                                         20 April 2024

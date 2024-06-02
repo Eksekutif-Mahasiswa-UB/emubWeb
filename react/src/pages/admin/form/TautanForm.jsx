@@ -37,7 +37,7 @@ const TautanForm = ({setRefresh,refresh}) => {
         <label htmlFor="">Nama</label>
         <input
           {...register("nama")}
-          className="border rounded-md py-1 px-3 border-primary-charcoalGray"
+          className="border rounded-md py-1 px-3 border-primary-charcoalGray bg-gray-200 text-black"
           type="text"
         />
         {errors.nama && <small className="text-red-500">{errors.nama.message}</small>}
@@ -46,14 +46,14 @@ const TautanForm = ({setRefresh,refresh}) => {
         <label htmlFor="">Link</label>
         <input
           {...register("link")}
-          className="border rounded-md py-1 px-3 border-primary-charcoalGray"
+          className="border rounded-md py-1 px-3 border-primary-charcoalGray bg-gray-200 text-black"
           type="text"
         />
         {errors.link && <small className="text-red-500">{errors.link.message}</small>}
       </div>
       <button
         type="submit"
-        className="px-3 py-1 rounded-md active:scale-95 duration-200 ease-in-out bg-primary-charcoalGray text-primary-white"
+        className="px-3 py-1 rounded-md active:scale-95 duration-200 ease-in-out bg-primary-tealBlue text-primary-white"
       >
         Tambah
       </button>

@@ -44,12 +44,7 @@ Route::post('/tambahBerita', [BeritaController::class, 'store'])->middleware(['a
 Route::post('/updateBerita/{id}', [BeritaController::class, 'update'])->middleware(['auth:sanctum', 'berita_role']);
 Route::delete('/deleteBerita/{id}', [BeritaController::class, 'delete'])->middleware(['auth:sanctum', 'berita_role']);
 Route::get('/lihatBerita', [BeritaController::class, 'show']);
-Route::get('/lihatBerita/{judul}', [BeritaController::class, 'search']);
-
-
-
-
-
+Route::get('/lihatBerita/{id}', [BeritaController::class, 'getById']);
 
 
 

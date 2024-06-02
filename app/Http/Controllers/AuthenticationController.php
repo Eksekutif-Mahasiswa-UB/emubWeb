@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Admin;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthenticationController extends Controller
 {
@@ -18,14 +19,14 @@ class AuthenticationController extends Controller
 
         $admin = Admin::where('username', $request->username)->first();
         
-        if (! $admin || $admin->password !== $request->password) {
+        if (! $admin || !Hash::check($request->password, $admin->password)) {
             throw ValidationException::withMessages([
                 'username' => ['Kombinasi username dan password salah.'],
             ]);
         }
 
         return $admin->createToken('admin login')->plainTextToken;
-    }
+    } 
 
     public function logout(Request $request)
     {

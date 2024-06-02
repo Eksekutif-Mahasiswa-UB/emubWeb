@@ -1,34 +1,47 @@
 import { Icon } from "@iconify/react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Quotes from '../../../assets/LandingPage/quotes.png'
+import {getAllBerita } from "../../../api/services/berita";
+import Skeleton from "../../Skeleton";
+import { Link } from "react-router-dom";
+
 const Berita = () => {
-    const dummy = [
-        {
-            id: 1,
-            name: "Profil Alumni",
-        },
-        {
-            id: 2,
-            name: "JHID - EM",
-        },
-        {
-            id: 1,
-            name: "Profil Alumni",
-        },
-        {
-            id: 2,
-            name: "JHID - EM",
-        },
-        {
-            id: 1,
-            name: "Profil Alumni",
-        },
-        {
-            id: 2,
-            name: "JHID - EM",
-        },
-    ];
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await getAllBerita();
+          console.log(response.data)
+          setData(response.data);
+          setLoading(false);
+        } catch (error) {
+          console.log(error);
+          setLoading(false);
+        }
+      };
+      fetchData();
+    }, []);
+
+    const formatTanggal = (dateString) => {
+        const bulanIndo = [
+          "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+          "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+      
+        const date = new Date(dateString);
+        const tanggal = date.getDate();
+        const bulan = bulanIndo[date.getMonth()];
+        const tahun = date.getFullYear();
+      
+        return `${tanggal} ${bulan} ${tahun}`;
+      };
+    const skeleton =[
+        1,2,3
+    ]
+
     return (
         <section className=" px-4 lg:px-24 mt-10 lg:mt-20 font-helvetica-regular container mx-auto ">
             <div className="flex items-end gap-5">
@@ -68,31 +81,61 @@ const Berita = () => {
 
                 }}
                 >
-                  {
-                    dummy.map((item)=>(
+                  {loading ? (
+        skeleton.map((item)=>(
+            <SplideSlide className=" h-fit py-10">
+            <div className="aspect-[9/13] w-full group hover:shadow-xl duration-300 ease-in-out relative rounded border overflow-hidden">
+              
+                <Skeleton className={'w-full aspect-video'}></Skeleton>
+                <div className="w-full  py-1 px-2 ">
+                    <div className="flex py-2 items-start justify-between">
+                <Skeleton className={'w-1/4 h-5'}></Skeleton>
+                <Skeleton className={'w-1/5 h-5'}></Skeleton>
+                       
+                    
+                    </div>
+                <Skeleton className={'w-full h-20'}></Skeleton>
+                    <div className="px-3 lg:px-5 mt-5 flex flex-col gap-2 ">
+                <Skeleton className={'w-full h-5 '}></Skeleton>
+                <Skeleton className={'w-full h-5 '}></Skeleton>
+
+                    </div>
+                <Skeleton className={'w-4/6 h-10 absolute left-1/2 bottom-3 lg:bottom-5 -translate-x-1/2  '}></Skeleton>
+                    
+
+                </div>
+            </div>
+            </SplideSlide>
+        ))
+        ) : data && data.length > 0 ? (
+                    data.map((item)=>(
                         <SplideSlide className=" h-fit py-10">
                         <div className="aspect-[9/13] w-full group hover:shadow-xl duration-300 ease-in-out relative rounded border overflow-hidden">
                             <div className="w-full aspect-video overflow-hidden">
-                            <img src="https://source.unsplash.com/random/900×700/?university" className="size-full object-cover group-hover:scale-110 group-hover:rotate-3 duration-1000 ease-in-out" alt="" />
+                            <img src={item.gambar} className="size-full object-cover group-hover:scale-110 group-hover:rotate-3 duration-1000 ease-in-out" alt="" />
 
                             </div>
                             <div className="w-full  py-1 px-2 ">
                                 <div className="flex items-start justify-between">
-                                    <small className="text-xs">20 April 2024</small>
-                                    <div className="w-fit px-3 py-1.5 text-xs rounded-2xl bg-primary-tealBlue text-slate-100">LUGRI</div>
+                                    <small className="text-xs">{formatTanggal(item.created_at)}</small>
+                                    {/* <div className="w-fit px-3 py-1.5 text-xs rounded-2xl bg-primary-tealBlue text-slate-100">LUGRI</div> */}
                                 </div>
                                 <div className="px-3 lg:px-5">
-                                <h1 className="lg:mt-3 mt-1 text-sm sm:text-lg lg:text-2xl font-bold h-fit lg:h-16 line-clamp-2">JUDUL BERITA JUDUL BERITA JUDUL BERITA JUDUL BERITA </h1>
-                                <p className="text-xs h-fit mt-1 lg:mt-3 line-clamp-3 lg:line-clamp-4">Isi berita lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolor sit amet, consect piscing elit. Isi berita lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dolor si</p>
+                                <h1 className="lg:mt-3 mt-1 text-sm sm:text-lg lg:text-2xl font-bold h-fit lg:h-16 line-clamp-2">{item.judul}</h1>
+                                <p className="text-xs h-fit mt-1 lg:mt-3 line-clamp-3 lg:line-clamp-4">{item.informasi}</p>
 
                                 </div>
+                                <Link to={`/berita/${item.idBerita}`}>
                                 <button className="w-4/6 absolute left-1/2 bottom-3 lg:bottom-5 text-xs lg:text-base -translate-x-1/2 mx-auto rounded py-1 lg:py-2 bg-primary-charcoalGray text-slate-100 active:scale-95 duration-300 ease-in-out ">Baca Selengkapnya</button>
+                                </Link>
 
                             </div>
                         </div>
                         </SplideSlide>
                     ))
-                  }
+                ) : (
+                    <div>No Data Available</div>
+                  )}
                 </Splide>
             </main>
             <div className="flex items-center gap-5">

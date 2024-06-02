@@ -124,13 +124,21 @@ class BeritaController extends Controller
         return response()->json($berita);
     }
 
-    public function search($judul)
-    {
-        $berita = Berita::where('judul', 'like', '%' . $judul . '%')->get(['idBerita', 'judul', 'informasi', 'gambar']);
-        $berita = $berita->map(function ($item) {
-            $item->gambar = json_decode($item->gambar);
-            return $item;
-        });
-        return response()->json($berita);
+    
+
+    public function getById($id)
+{
+    $berita = Berita::find($id);
+    
+    if(!$berita) {
+        return response()->json(['message' => 'Berita tidak ditemukan'], 404);
     }
+    
+    $berita->gambar = json_decode($berita->gambar);
+    
+    return response()->json($berita);
+}
+
+
+    
 }
