@@ -54,14 +54,12 @@ const getAllBerita = async () => {
       throw error;
     }
   };
-const getBeritaByName = async ({name}) => {
+const getBeritaById = async ({id }) => {
     try {
-      const token = localStorage.getItem("token");
-  
-      const response = await coreApi.get(`lihatBerita/${name}`, {
+      
+      const response = await coreApi.get(`lihatBerita/${id}`, {
         headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, 
+          "Content-Type": "application/json", 
         },
       });
       return response
@@ -70,4 +68,4 @@ const getBeritaByName = async ({name}) => {
       throw error;
     }
   };
-export { createBerita ,deleteBerita,getAllBerita,getBeritaByName};
+export { createBerita ,deleteBerita,getAllBerita,getBeritaById};

@@ -46,9 +46,9 @@ const KoordinatorPergerakan = () => {
     };
 
   return (
-    <div className="font-helvetica-regular bg-primary-white pb-20">
+    <div className="font-helvetica-regular bg-primary-white pb-20 overflow-hidden">
       <Header bpi={Pergerakan[0].bpi} title={"KEMENTRIAN KOORDINATOR PERGERAKAAN"} />
-      <section className="mx-auto  lg:px-24 container flex justify-center gap-1 lg:gap-5 py-10 lg:flex-nowrap flex-wrap">
+      <section className="mx-auto  lg:px-24 container overflow-hidden flex justify-center gap-1 lg:gap-5 py-10 lg:flex-nowrap flex-wrap">
         {Pergerakan[0].kementerian.map((item, index) => (
           <CardKementrian
           name={item.nama}

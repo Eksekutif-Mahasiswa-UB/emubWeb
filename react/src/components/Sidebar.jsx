@@ -20,7 +20,7 @@ const Sidebar = ({ setIsActive }) => {
 
  return (
    <aside
-     className={`left-0 top-0 z-9999 flex h-screen w-72 flex-col justify-between overflow-y-hidden bg-primary-charcoalGray text-primary-white duration-300 ease-linear static font-normal py-5`}
+     className={`left-0 top-0 z-9999 flex h-screen w-72 flex-col justify-between overflow-y-hidden bg-cyan-700 text-primary-white duration-300 ease-linear static font-normal py-5`}
    >
      <div className="">
        <img

@@ -37,7 +37,7 @@ const TableAdmin = ({refresh,setRefresh}) => {
     <div className="relative overflow-x-auto ">
       <h1 className="text-2xl font-semibold">Daftar Admin</h1>
       <table className="w-full text-sm text-left  rtl:text-right ">
-        <thead className="text-xs text-primary-charcoalGray uppercase bg-primary-white">
+        <thead className="text-xs text-primary-charcoalGray uppercase bg-gray-200">
           <tr>
             <th scope="col" className="px-6 py-3">
               #

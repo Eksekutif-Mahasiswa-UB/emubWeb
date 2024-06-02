@@ -7,7 +7,7 @@ const AdminLayout = ({children,setIsActive,isActive}) => {
 
     return (
       <div className="font-helvetica-regular">
-        <div className="flex h-screen overflow-hidden">
+        <div className="flex h-screen overflow-hidden bg-white ">
         
           <Sidebar setIsActive={setIsActive}  />
          
