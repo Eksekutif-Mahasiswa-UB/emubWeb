@@ -11,3 +11,27 @@ export const moveToTop=()=>{
     const restOfWord = word.slice(1).toLowerCase();
     return firstLetter + restOfWord;
   }
+
+  export  const formatTanggal = (dateString) => {
+    const bulanIndo = [
+        "Januari",
+        "Februari",
+        "Maret",
+        "April",
+        "Mei",
+        "Juni",
+        "Juli",
+        "Agustus",
+        "September",
+        "Oktober",
+        "November",
+        "Desember",
+    ];
+
+    const date = new Date(dateString);
+    const tanggal = date.getDate();
+    const bulan = bulanIndo[date.getMonth()];
+    const tahun = date.getFullYear();
+
+    return `${tanggal} ${bulan} ${tahun}`;
+};

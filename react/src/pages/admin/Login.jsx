@@ -54,7 +54,7 @@ const Login = () => {
             value={credentials.password}
             onChange={handleInputChange}
           />
-          <button onClick={()=>onSubmit()} type="button" className="bg-primary-tealBlue rounded-md py-2">
+          <button onClick={()=>onSubmit()} type="button" className="bg-primary-tealBlue active:scale-95 duration-200 transition-all ease-in-out rounded-md py-2">
             Login
           </button>
         </div>

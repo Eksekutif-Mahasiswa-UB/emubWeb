@@ -12,6 +12,7 @@ const TableBerita = ({ refresh, setRefresh }) => {
         const response = await getAllBerita();
         setData(response.data);
         setLoading(false);
+        console.log(response)
       } catch (error) {
         console.log(error);
         setLoading(false);

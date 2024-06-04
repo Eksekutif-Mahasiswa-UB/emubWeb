@@ -92,7 +92,7 @@ const Berita = () => {
                         </Link>
                       </div>
                       <div className='w-1/4 h-full bg-black'>
-                        <img src={item.gambar} alt="card-img" draggable="false" className='w-full h-full object-cover ' />
+                        <img src={item.gambar[0]} alt="card-img" draggable="false" className='w-full h-full object-cover ' />
                       </div>
             
                     </div>

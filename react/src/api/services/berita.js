@@ -54,7 +54,7 @@ const getAllBerita = async () => {
       throw error;
     }
   };
-const getBeritaById = async ({id }) => {
+const getBeritaById = async (id ) => {
     try {
       
       const response = await coreApi.get(`lihatBerita/${id}`, {
