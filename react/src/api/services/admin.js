@@ -26,6 +26,7 @@ const deleteAdmin = async (id) => {
       const response = await coreApi.delete(`lihatAdmin/${id}`, {
         headers: {
           "Content-Type": "application/json",
+          Accept:"application/json",
           Authorization: `Bearer ${token}`, 
         },
       });

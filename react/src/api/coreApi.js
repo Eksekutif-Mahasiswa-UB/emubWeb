@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const coreApi = axios.create({
-  baseURL: 'http://localhost:8000/api/'
+  baseURL: 'https://superapart-me.preview-domain.com/api/'
 });
 
 export default coreApi;

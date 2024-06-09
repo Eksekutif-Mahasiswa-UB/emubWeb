@@ -43,10 +43,7 @@ const getAllBerita = async () => {
       const token = localStorage.getItem("token");
   
       const response = await coreApi.get("lihatBerita", {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, 
-        },
+       
       });
       return response
     } catch (error) {

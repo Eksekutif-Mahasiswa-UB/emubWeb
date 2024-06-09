@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
         const fetchProfile = async()=>{
           try {
             const response = await getProfile();
-            setProfile(response.data)
+            setProfile(response)
             
           } catch (error) {
             console.log(error)
