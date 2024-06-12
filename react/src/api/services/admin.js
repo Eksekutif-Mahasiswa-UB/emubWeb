@@ -9,7 +9,6 @@ const createAdmin = async (form) => {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, 
         },
       }
     );
@@ -27,7 +26,6 @@ const deleteAdmin = async (id) => {
         headers: {
           "Content-Type": "application/json",
           Accept:"application/json",
-          Authorization: `Bearer ${token}`, 
         },
       });
       return response
@@ -36,15 +34,17 @@ const deleteAdmin = async (id) => {
       throw error;
     }
   };
+  const token = localStorage.getItem("token");
 const getAllAdmin = async () => {
-    try {
-      const token = localStorage.getItem("token");
-  
+  try {
       const response = await coreApi.get("lihatAdmin", {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, 
+          Accept:"application/json",
+       
+          
         },
+        
       });
       return response
     } catch (error) {

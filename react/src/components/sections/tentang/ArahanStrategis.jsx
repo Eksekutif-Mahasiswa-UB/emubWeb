@@ -18,7 +18,7 @@ const ArahanStrategis = () => {
             ],
         },
         {
-            title: "Pengukuhan dan Pemberdayaan Masyarakat",
+            title: "Pengabdian dan Pemberdayaan Masyarakat",
             desc: [
                 "Hadir sebagai wujud pengabdian UB kepada masyarakat Kota Malang dan Malang Raya",
                 "Memetakan dan memproyeksikan masalah serta potensi di sektor pengabdian kemasyarakatan lingkungan yang ada di Jawa Timur",
@@ -44,7 +44,7 @@ const ArahanStrategis = () => {
             ],
         },
         {
-            title: "Pelayanan dan Jaringan Organisasi",
+            title: "Diplomasi dan Jaringan Organisasi",
             desc: [
                 "Mewujudkan hubungan antara EM dan elemen internal maupun eksternal UB yang komunikatif, inklusif, partisipatif, guna mewujudkan relasi yang sinergis dan mutualisme",
                 "Membuka dan membina hubungan seluas-luasnya baik antara elemen EM Brawijaya, Rektorat, IKA UB, dan berbagai elemen lainnya",

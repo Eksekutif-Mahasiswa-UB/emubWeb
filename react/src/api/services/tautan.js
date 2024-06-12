@@ -9,7 +9,6 @@ const createTautan = async (form) => {
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, 
         },
       }
     );
@@ -26,7 +25,7 @@ const deleteTautan = async (id) => {
       const response = await coreApi.delete(`lihatTautan/${id}`, {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, 
+       
         },
       });
       return response

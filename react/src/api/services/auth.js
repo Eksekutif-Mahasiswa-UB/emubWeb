@@ -1,4 +1,3 @@
-import axios from "axios";
 import coreApi from "../coreApi";
 
 const login = async (form) => {
@@ -25,7 +24,7 @@ const logout = async () => {
       const response = await coreApi.get("logout", {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, 
+       
         },
       });
       console.log(response);
@@ -36,24 +35,18 @@ const logout = async () => {
   };
 const getProfile = async () => {
     try {
-      await axios.get('https://superapart-me.preview-domain.com/sanctum/csrf-cookie');
-     
       const token = localStorage.getItem("token");
   
-   
       const response = await coreApi.get("user", {
-        method:"GET",
         headers: {
-          Accept:"application/json",
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`, 
-          
+      
         },
       });
       return response
     } catch (error) {
       console.log(error);
-   
+      throw error;
     }
   };
 export { login ,logout,getProfile};

@@ -42,7 +42,7 @@ const Kabinet = () => {
             scale,
         }}
         className="text-base lg:text-3xl text-shadow-heading text-primary-tealBlue text-center italic">
-            "TULISKAN CERITA, MENGGAPAI ASA, WIJAYA"
+            "UKIR CERITA, GAPAI CITA WIJAYA"
         </motion.p>
     </div>
 </section>
