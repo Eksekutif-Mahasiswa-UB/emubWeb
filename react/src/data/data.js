@@ -1010,7 +1010,7 @@ export const prokerMegaBesar = [
             "Kampung Budaya merupakan rangkaian kegiatan pelestarian budaya untuk meningkatkan kreativitas mahasiswa dalam mengenalkan kekayaan warisan budaya Indonesia kepada masyarakatumum, terutama para anggota akademis Universitas Brawijaya.",
             "Kampung Budaya menjadi kegiatan tahunan yang dipersembahkan melalui Kementerian Dalam Negeri Eksekutif Mahasiswa yang melibatkan seluruh elemen di lingkungan Universitas Brawijaya, seperti Forum Daerah (FORDA), serta berbagai organisasi kebudayaan dan UKM Seni. Melalui kolaborasi ini, kegiatan Kampung Budaya menyajikan pagelaran seni dan kebudayaan yang mencakup beragam aspek, mulai dari rumah adat, tarian, hingga busana, yang merupakan ciri khas dari masing-masing daerah yang diwakilinya.",
         ],
-        kementrian: "KPI",
+        kementrian: "DAGRI",
     },
     {
         id: 4,
@@ -1019,7 +1019,7 @@ export const prokerMegaBesar = [
         body: [
             "Mega Ekspedisi merupakan program pengabdian dan pemberdayaan masyarakat yang difokuskan untuk membantu pengembangan wilayah daerah Tertinggal, Terdepan dan Terluar (3T) yang ada di seluruh Indonesia yang memiliki kondisi geografis, sosial, ekonomi dan budaya yang kurang kurang berkembang dibandingkan dengan daerah lain.",
         ],
-        kementrian: "SENORA",
+        kementrian: "SOSMA",
     },
     {
         id: 5,
