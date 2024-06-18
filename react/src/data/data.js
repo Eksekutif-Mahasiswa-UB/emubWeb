@@ -16,15 +16,15 @@ import image4_4 from "../assets/ProkerEM/6ProkerMegaBesar/4.4.jpeg";
 
 // SPI
 // Gambar SPI
-import SPI_BPI_1 from "../assets/Struktur/Petinggi/SPI/SPI_BPI_1.png";
-import SPI_BPI_2 from "../assets/Struktur/Petinggi/SPI/SPI_BPI_2.png";
-import PARO_BPH_1 from "../assets/Struktur/Petinggi/SPI/PARO_BPH_1.png";
-import PARO_BPH_2 from "../assets/Struktur/Petinggi/SPI/PARO_BPH_2.png";
-import PARO_BPH_3 from "../assets/Struktur/Petinggi/SPI/PARO_BPH_3.png";
-import SETKAB_BPH_1 from "../assets/Struktur/Petinggi/SPI/SETKAB_BPH_1.png";
-import SETKAB_BPH_2 from "../assets/Struktur/Petinggi/SPI/SETKAB_BPH_2.png";
-import BENKAB_BPH_1 from "../assets/Struktur/Petinggi/SPI/BENKAB_BPH_1.png";
-import BENKAB_BPH_2 from "../assets/Struktur/Petinggi/SPI/BENKAB_BPH_2.png";
+import SPI_BPI_1 from "../assets/Struktur/Petinggi/SPI/SPI_BPI_1.webp";
+import SPI_BPI_2 from "../assets/Struktur/Petinggi/SPI/SPI_BPI_2.webp";
+import PARO_BPH_1 from "../assets/Struktur/Petinggi/SPI/PARO_BPH_1.webp";
+import PARO_BPH_2 from "../assets/Struktur/Petinggi/SPI/PARO_BPH_2.webp";
+import PARO_BPH_3 from "../assets/Struktur/Petinggi/SPI/PARO_BPH_3.webp";
+import SETKAB_BPH_1 from "../assets/Struktur/Petinggi/SPI/SETKAB_BPH_1.webp";
+import SETKAB_BPH_2 from "../assets/Struktur/Petinggi/SPI/SETKAB_BPH_2.webp";
+import BENKAB_BPH_1 from "../assets/Struktur/Petinggi/SPI/BENKAB_BPH_1.webp";
+import BENKAB_BPH_2 from "../assets/Struktur/Petinggi/SPI/BENKAB_BPH_2.webp";
 import PARO from "../assets/Struktur/Logo/PARO.svg";
 import SETKAB from "../assets/Struktur/Logo/SETKAB.svg";
 import BENKAB from "../assets/Struktur/Logo/BENKAB.svg";
@@ -32,24 +32,24 @@ import BENKAB from "../assets/Struktur/Logo/BENKAB.svg";
 
 //Pengembangan
 //Gambar Pengembangan
-import PENGEMBANGAN_BPI_1 from "../assets/Struktur/Petinggi/Pengembangan/PENGEMBANGAN_BPI_1.png";
-import PENGEMBANGAN_BPI_2 from "../assets/Struktur/Petinggi/Pengembangan/PENGEMBANGAN_BPI_2.png";
+import PENGEMBANGAN_BPI_1 from "../assets/Struktur/Petinggi/Pengembangan/PENGEMBANGAN_BPI_1.webp";
+import PENGEMBANGAN_BPI_2 from "../assets/Struktur/Petinggi/Pengembangan/PENGEMBANGAN_BPI_2.webp";
 import PSDM_BPH_1 from "../assets/Struktur/Petinggi/Pengembangan/PSDM_BPH_1.png";
 import PSDM_BPH_2 from "../assets/Struktur/Petinggi/Pengembangan/PSDM_BPH_2.png";
 import PSDM_BPH_3 from "../assets/Struktur/Petinggi/Pengembangan/PSDM_BPH_3.png";
 import PSDM_BPH_4 from "../assets/Struktur/Petinggi/Pengembangan/PSDM_BPH_4.png";
-import RINOYA_BPH_1 from "../assets/Struktur/Petinggi/Pengembangan/RINOYA_BPH_1.png";
-import RINOYA_BPH_2 from "../assets/Struktur/Petinggi/Pengembangan/RINOYA_BPH_2.png";
-import RINOYA_BPH_3 from "../assets/Struktur/Petinggi/Pengembangan/RINOYA_BPH_3.png";
-import RINOYA_BPH_4 from "../assets/Struktur/Petinggi/Pengembangan/RINOYA_BPH_4.png";
-import SENORA_BPH_1 from "../assets/Struktur/Petinggi/Pengembangan/SENORA_BPH_1.png";
-import SENORA_BPH_2 from "../assets/Struktur/Petinggi/Pengembangan/SENORA_BPH_2.png";
-import SENORA_BPH_3 from "../assets/Struktur/Petinggi/Pengembangan/SENORA_BPH_3.png";
-import SENORA_BPH_4 from "../assets/Struktur/Petinggi/Pengembangan/SENORA_BPH_4.png";
-import BUMM_BPH_1 from "../assets/Struktur/Petinggi/Pengembangan/BUMM_BPH_1.png";
-import BUMM_BPH_2 from "../assets/Struktur/Petinggi/Pengembangan/BUMM_BPH_2.png";
-import BUMM_BPH_3 from "../assets/Struktur/Petinggi/Pengembangan/BUMM_BPH_3.png";
-import BUMM_BPH_4 from "../assets/Struktur/Petinggi/Pengembangan/BUMM_BPH_4.png";
+import RINOYA_BPH_1 from "../assets/Struktur/Petinggi/Pengembangan/RINOYA_BPH_1.webp";
+import RINOYA_BPH_2 from "../assets/Struktur/Petinggi/Pengembangan/RINOYA_BPH_2.webp";
+import RINOYA_BPH_3 from "../assets/Struktur/Petinggi/Pengembangan/RINOYA_BPH_3.webp";
+import RINOYA_BPH_4 from "../assets/Struktur/Petinggi/Pengembangan/RINOYA_BPH_4.webp";
+import SENORA_BPH_1 from "../assets/Struktur/Petinggi/Pengembangan/SENORA_BPH_1.webp";
+import SENORA_BPH_2 from "../assets/Struktur/Petinggi/Pengembangan/SENORA_BPH_2.webp";
+import SENORA_BPH_3 from "../assets/Struktur/Petinggi/Pengembangan/SENORA_BPH_3.webp";
+import SENORA_BPH_4 from "../assets/Struktur/Petinggi/Pengembangan/SENORA_BPH_4.webp";
+import BUMM_BPH_1 from "../assets/Struktur/Petinggi/Pengembangan/BUMM_BPH_1.webp";
+import BUMM_BPH_2 from "../assets/Struktur/Petinggi/Pengembangan/BUMM_BPH_2.webp";
+import BUMM_BPH_3 from "../assets/Struktur/Petinggi/Pengembangan/BUMM_BPH_3.webp";
+import BUMM_BPH_4 from "../assets/Struktur/Petinggi/Pengembangan/BUMM_BPH_4.webp";
 import PSDM from "../assets/Struktur/Logo/PSDM.svg";
 import RINOYA from "../assets/Struktur/Logo/RINOYA.svg";
 import SENORA from "../assets/Struktur/Logo/SENORA.svg";
@@ -58,24 +58,24 @@ import BUMM from "../assets/Struktur/Logo/BUMM.svg";
 
 //Pergerakan
 //Gambar Pergerakan
-import PERGERAKAN_BPI_1 from "../assets/Struktur/Petinggi/Pergerakan/PERGERAKAN_BPI_1.png";
-import PERGERAKAN_BPI_2 from "../assets/Struktur/Petinggi/Pergerakan/PERGERAKAN_BPI_2.png";
+import PERGERAKAN_BPI_1 from "../assets/Struktur/Petinggi/Pergerakan/PERGERAKAN_BPI_1.webp";
+import PERGERAKAN_BPI_2 from "../assets/Struktur/Petinggi/Pergerakan/PERGERAKAN_BPI_2.webp";
 import ADVOKASI_BPH_1 from "../assets/Struktur/Petinggi/Pergerakan/ADVOKASI_BPH_1.png";
 import ADVOKASI_BPH_2 from "../assets/Struktur/Petinggi/Pergerakan/ADVOKASI_BPH_2.png";
 import ADVOKASI_BPH_3 from "../assets/Struktur/Petinggi/Pergerakan/ADVOKASI_BPH_3.png";
 import ADVOKASI_BPH_4 from "../assets/Struktur/Petinggi/Pergerakan/ADVOKASI_BPH_4.png";
-import AKSPRO_BPH_1 from "../assets/Struktur/Petinggi/Pergerakan/AKSPRO_BPH_1.png";
-import AKSPRO_BPH_2 from "../assets/Struktur/Petinggi/Pergerakan/AKSPRO_BPH_2.png";
+import AKSPRO_BPH_1 from "../assets/Struktur/Petinggi/Pergerakan/AKSPRO_BPH_1.webp";
+import AKSPRO_BPH_2 from "../assets/Struktur/Petinggi/Pergerakan/AKSPRO_BPH_2.webp";
 import AKSPRO_BPH_3 from "../assets/Struktur/Petinggi/Pergerakan/AKSPRO_BPH_3.png";
 import AKSPRO_BPH_4 from "../assets/Struktur/Petinggi/Pergerakan/AKSPRO_BPH_4.png";
-import KPI_BPH_1 from "../assets/Struktur/Petinggi/Pergerakan/KPI_BPH_1.png";
-import KPI_BPH_2 from "../assets/Struktur/Petinggi/Pergerakan/KPI_BPH_2.png";
-import KPI_BPH_3 from "../assets/Struktur/Petinggi/Pergerakan/KPI_BPH_3.png";
-import KPI_BPH_4 from "../assets/Struktur/Petinggi/Pergerakan/KPI_BPH_4.png";
-import PPP_BPH_1 from "../assets/Struktur/Petinggi/Pergerakan/PPP_BPH_1.png";
-import PPP_BPH_2 from "../assets/Struktur/Petinggi/Pergerakan/PPP_BPH_2.png";
-import PPP_BPH_3 from "../assets/Struktur/Petinggi/Pergerakan/PPP_BPH_3.png";
-import PPP_BPH_4 from "../assets/Struktur/Petinggi/Pergerakan/PPP_BPH_4.png";
+import KPI_BPH_1 from "../assets/Struktur/Petinggi/Pergerakan/KPI_BPH_1.webp";
+import KPI_BPH_2 from "../assets/Struktur/Petinggi/Pergerakan/KPI_BPH_2.webp";
+import KPI_BPH_3 from "../assets/Struktur/Petinggi/Pergerakan/KPI_BPH_3.webp";
+import KPI_BPH_4 from "../assets/Struktur/Petinggi/Pergerakan/KPI_BPH_4.webp";
+import PPP_BPH_1 from "../assets/Struktur/Petinggi/Pergerakan/PPP_BPH_1.webp";
+import PPP_BPH_2 from "../assets/Struktur/Petinggi/Pergerakan/PPP_BPH_2.webp";
+import PPP_BPH_3 from "../assets/Struktur/Petinggi/Pergerakan/PPP_BPH_3.webp";
+import PPP_BPH_4 from "../assets/Struktur/Petinggi/Pergerakan/PPP_BPH_4.webp";
 import ADVOKASI from "../assets/Struktur/Logo/ADVOKASI.png";
 import AKSPRO from "../assets/Struktur/Logo/AKSPRO.png";
 import KPI from "../assets/Struktur/Logo/KPI.svg";
@@ -84,19 +84,19 @@ import PPP from "../assets/Struktur/Logo/P3.svg";
 
 //PPM
 //Gambar PPM
-import PPM_BPI_1 from "../assets/Struktur/Petinggi/PPM/PPM_BPI_1.png";
-import PPM_BPI_2 from "../assets/Struktur/Petinggi/PPM/PPM_BPI_2.png";
-import SOSMA_BPH_2 from "../assets/Struktur/Petinggi/PPM/SOSMA_BPH_2.png";
-import SOSMA_BPH_1 from "../assets/Struktur/Petinggi/PPM/SOSMA_BPH_1.png";
+import PPM_BPI_1 from "../assets/Struktur/Petinggi/PPM/PPM_BPI_1.webp";
+import PPM_BPI_2 from "../assets/Struktur/Petinggi/PPM/PPM_BPI_2.webp";
+import SOSMA_BPH_2 from "../assets/Struktur/Petinggi/PPM/SOSMA_BPH_2.webp";
+import SOSMA_BPH_1 from "../assets/Struktur/Petinggi/PPM/SOSMA_BPH_1.webp";
 // import SOSMA_BPH_1 from "../assets/SOSMA_BPH_1.png";
 import SOSMA_BPH_4 from "../assets/Struktur/Petinggi/PPM/SOSMA_BPH_4.png";
 // import LH_BPH_1 from "../assets/LH_BPH_1.png";
-import LH_BPH_1 from "../assets/Struktur/Petinggi/PPM/LH_BPH_1.png";
-import LH_BPH_2 from "../assets/Struktur/Petinggi/PPM/LH_BPH_2.png";
-import LH_BPH_3 from "../assets/Struktur/Petinggi/PPM/LH_BPH_3.png";
-import LH_BPH_4 from "../assets/Struktur/Petinggi/PPM/LH_BPH_4.png";
-import BM_BPH_1 from "../assets/Struktur/Petinggi/PPM/BM_BPH_1.png";
-import BM_BPH_2 from "../assets/Struktur/Petinggi/PPM/BM_BPH_2.png";
+import LH_BPH_1 from "../assets/Struktur/Petinggi/PPM/LH_BPH_1.webp";
+import LH_BPH_2 from "../assets/Struktur/Petinggi/PPM/LH_BPH_2.webp";
+import LH_BPH_3 from "../assets/Struktur/Petinggi/PPM/LH_BPH_3.webp";
+import LH_BPH_4 from "../assets/Struktur/Petinggi/PPM/LH_BPH_4.webp";
+import BM_BPH_1 from "../assets/Struktur/Petinggi/PPM/BM_BPH_1.webp";
+import BM_BPH_2 from "../assets/Struktur/Petinggi/PPM/BM_BPH_2.webp";
 import SOSMA from "../assets/Struktur/Logo/SOSMA.svg";
 import LH from "../assets/Struktur/Logo/LH.svg";
 import BM from "../assets/Struktur/Logo/BM.svg";
@@ -104,21 +104,21 @@ import BM from "../assets/Struktur/Logo/BM.svg";
 
 //DJO
 //Gambar DJO
-import DJO_BPI_1 from "../assets/Struktur/Petinggi/DJO/DJO_BPI_1.png";
-import DJO_BPI_2 from "../assets/Struktur/Petinggi/DJO/DJO_BPI_2.png";
-import DAGRI_BPH_1 from "../assets/Struktur/Petinggi/DJO/DAGRI_BPH_1.png";
-import DAGRI_BPH_2 from "../assets/Struktur/Petinggi/DJO/DAGRI_BPH_2.png";
-import DAGRI_BPH_3 from "../assets/Struktur/Petinggi/DJO/DAGRI_BPH_3.png";
-import DAGRI_BPH_4 from "../assets/Struktur/Petinggi/DJO/DAGRI_BPH_4.png";
-import LUGRI_BPH_1 from "../assets/Struktur/Petinggi/DJO/LUGRI_BPH_1.png";
-import LUGRI_BPH_2 from "../assets/Struktur/Petinggi/DJO/LUGRI_BPH_2.png";
-import LUGRI_BPH_3 from "../assets/Struktur/Petinggi/DJO/LUGRI_BPH_3.png";
-import LUGRI_BPH_4 from "../assets/Struktur/Petinggi/DJO/LUGRI_BPH_4.png";
-import KOMINFO_BPH_1 from "../assets/Struktur/Petinggi/DJO/KOMINFO_BPH_1.png";
-import KOMINFO_BPH_2 from "../assets/Struktur/Petinggi/DJO/KOMINFO_BPH_2.png";
-import KOMINFO_BPH_3 from "../assets/Struktur/Petinggi/DJO/KOMINFO_BPH_3.png";
-import KOMINFO_BPH_4 from "../assets/Struktur/Petinggi/DJO/KOMINFO_BPH_4.png";
-import KOMINFO_BPH_5 from "../assets/Struktur/Petinggi/DJO/KOMINFO_BPH_5.png";
+import DJO_BPI_1 from "../assets/Struktur/Petinggi/DJO/DJO_BPI_1.webp";
+import DJO_BPI_2 from "../assets/Struktur/Petinggi/DJO/DJO_BPI_2.webp";
+// import DAGRI_BPH_1 from "../assets/Struktur/Petinggi/DJO/DAGRI_BPH_1.webp";
+import DAGRI_BPH_2 from "../assets/Struktur/Petinggi/DJO/DAGRI_BPH_2.webp";
+import DAGRI_BPH_3 from "../assets/Struktur/Petinggi/DJO/DAGRI_BPH_3.webp";
+import DAGRI_BPH_4 from "../assets/Struktur/Petinggi/DJO/DAGRI_BPH_4.webp";
+import LUGRI_BPH_1 from "../assets/Struktur/Petinggi/DJO/LUGRI_BPH_1.webp";
+import LUGRI_BPH_2 from "../assets/Struktur/Petinggi/DJO/LUGRI_BPH_2.webp";
+import LUGRI_BPH_3 from "../assets/Struktur/Petinggi/DJO/LUGRI_BPH_3.webp";
+import LUGRI_BPH_4 from "../assets/Struktur/Petinggi/DJO/LUGRI_BPH_4.webp";
+import KOMINFO_BPH_1 from "../assets/Struktur/Petinggi/DJO/KOMINFO_BPH_1.webp";
+import KOMINFO_BPH_2 from "../assets/Struktur/Petinggi/DJO/KOMINFO_BPH_2.webp";
+import KOMINFO_BPH_3 from "../assets/Struktur/Petinggi/DJO/KOMINFO_BPH_3.webp";
+import KOMINFO_BPH_4 from "../assets/Struktur/Petinggi/DJO/KOMINFO_BPH_4.webp";
+import KOMINFO_BPH_5 from "../assets/Struktur/Petinggi/DJO/KOMINFO_BPH_5.webp";
 import DAGRI from "../assets/Struktur/Logo/DAGRI.svg";
 import LUGRI from "../assets/Struktur/Logo/LUGRI.svg";
 import KOMINFO from "../assets/Struktur/Logo/KOMINFO.png";
@@ -829,7 +829,7 @@ export const DJO = [
                     {
                         nama: "Rachmat Rayansha",
                         jabatan: "Menteri Dalam Negeri",
-                        image: DAGRI_BPH_1,
+                        // image: DAGRI_BPH_1,
                     },
                     {
                         nama: "Muhammad Rizqi N. A. G. ",

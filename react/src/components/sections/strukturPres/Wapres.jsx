@@ -1,7 +1,7 @@
-import fotowapres from "../../../assets/Struktur/Pres/fotowapres.png";
-import kiri2 from "../../../assets/Struktur/Pres/kiri2.png";
+import fotowapres from "../../../assets/Struktur/Pres/fotowapres.webp";
+import kiri2 from "../../../assets/Struktur/Pres/kiri2.webp";
 import { motion, useScroll, useTransform } from "framer-motion";
-import kanan2 from "../../../assets/Struktur/Pres/kanan2.png";
+import kanan2 from "../../../assets/Struktur/Pres/kanan2.webp";
 import { useRef } from "react";
 const Wapres = () => {
     const target = useRef(null);

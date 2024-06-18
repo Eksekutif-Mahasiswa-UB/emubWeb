@@ -1,6 +1,6 @@
-import kiri1 from "../../../assets/Struktur/Pres/kiri1.png";
-import fotopres from "../../../assets/Struktur/Pres/fotopres.png";
-import kanan1 from "../../../assets/Struktur/Pres/kanan1.png";
+import kiri1 from "../../../assets/Struktur/Pres/kiri1.webp";
+import fotopres from "../../../assets/Struktur/Pres/fotopres.webp";
+import kanan1 from "../../../assets/Struktur/Pres/kanan1.webp";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { forwardRef } from "react";

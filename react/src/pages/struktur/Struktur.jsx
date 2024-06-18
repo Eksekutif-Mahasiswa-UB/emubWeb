@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 
 //Gambar
-import SPI_BPI_1 from "../../assets/Struktur/Petinggi/SPI/SPI_BPI_1.png";
-import SPI_BPI_2 from "../../assets/Struktur/Petinggi/SPI/SPI_BPI_2.png";
-import PENGEMBANGAN_BPI_1 from "../../assets/Struktur/Petinggi/Pengembangan/PENGEMBANGAN_BPI_1.png";
-import PENGEMBANGAN_BPI_2 from "../../assets/Struktur/Petinggi/Pengembangan/PENGEMBANGAN_BPI_2.png";
-import PERGERAKAN_BPI_1 from "../../assets/Struktur/Petinggi/Pergerakan/PERGERAKAN_BPI_1.png";
-import PERGERAKAN_BPI_2 from "../../assets/Struktur/Petinggi/Pergerakan/PERGERAKAN_BPI_2.png";
-import PPM_BPI_1 from "../../assets/Struktur/Petinggi/PPM/PPM_BPI_1.png";
-import PPM_BPI_2 from "../../assets/Struktur/Petinggi/PPM/PPM_BPI_2.png";
-import DJO_BPI_1 from "../../assets/Struktur/Petinggi/DJO/DJO_BPI_1.png";
-import DJO_BPI_2 from "../../assets/Struktur/Petinggi/DJO/DJO_BPI_2.png";
+import SPI_BPI_1 from "../../assets/Struktur/Petinggi/SPI/SPI_BPI_1.webp";
+import SPI_BPI_2 from "../../assets/Struktur/Petinggi/SPI/SPI_BPI_2.webp";
+import PENGEMBANGAN_BPI_1 from "../../assets/Struktur/Petinggi/Pengembangan/PENGEMBANGAN_BPI_1.webp";
+import PENGEMBANGAN_BPI_2 from "../../assets/Struktur/Petinggi/Pengembangan/PENGEMBANGAN_BPI_2.webp";
+import PERGERAKAN_BPI_1 from "../../assets/Struktur/Petinggi/Pergerakan/PERGERAKAN_BPI_1.webp";
+import PERGERAKAN_BPI_2 from "../../assets/Struktur/Petinggi/Pergerakan/PERGERAKAN_BPI_2.webp";
+import PPM_BPI_1 from "../../assets/Struktur/Petinggi/PPM/PPM_BPI_1.webp";
+import PPM_BPI_2 from "../../assets/Struktur/Petinggi/PPM/PPM_BPI_2.webp";
+import DJO_BPI_1 from "../../assets/Struktur/Petinggi/DJO/DJO_BPI_1.webp";
+import DJO_BPI_2 from "../../assets/Struktur/Petinggi/DJO/DJO_BPI_2.webp";
 
 import HeroSection from "../../components/sections/strukturPres/HeroSection";
 import Pres from "../../components/sections/strukturPres/Pres";
