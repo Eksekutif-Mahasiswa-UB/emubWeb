@@ -1,9 +1,9 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import React from "react";
-import first from "../../../assets/1.png"
-import second from "../../../assets/2.png"
-import third from "../../../assets/3.png"
-import fourth from "../../../assets/4.png"
+import first from "../../../assets/1.webp"
+import second from "../../../assets/2.webp"
+import third from "../../../assets/3.webp"
+import fourth from "../../../assets/4.webp"
 const HeroSection = () => {
     return (
         <section className="lg:py-10   py-5 lg:h-screen w-full " id="hero">

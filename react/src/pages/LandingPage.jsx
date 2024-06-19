@@ -3,7 +3,7 @@ import "@splidejs/react-splide/css";
 
 import "../styles/landingPage.css";
 
-import AboutImg from '../assets/aboutImage.png'
+import AboutImg from '../assets/aboutImage.webp'
 
 import ProkerUnggulan from "../components/sections/landingPage/ProkerUnggulan";
 import NilaiDasarOrganisasi from "../components/sections/landingPage/NilaiDasarOrganisasi";

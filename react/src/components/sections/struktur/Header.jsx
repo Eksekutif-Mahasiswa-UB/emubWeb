@@ -1,5 +1,5 @@
-import right from "../../../../src/assets/ProkerEM/heroRight.png";
-import left from "../../../../src/assets/ProkerEM/heroLeft.png";
+import right from "../../../../src/assets/ProkerEM/heroRight.webp";
+import left from "../../../../src/assets/ProkerEM/heroLeft.webp";
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
