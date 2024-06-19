@@ -105,7 +105,7 @@ const FilosofiLogo = () => {
                             key={activeLogo.id}
                             src={activeLogo.image}
                             alt="logo"
-                            className="aspect-square object-contain size-full absolute"
+                            className="aspect-square object-contain size-full absolute "
                             draggable="false"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}

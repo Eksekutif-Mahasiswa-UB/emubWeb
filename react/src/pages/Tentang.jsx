@@ -31,7 +31,7 @@ const Tentang = () => {
     });
 
     return (
-        <div className="scroll-smooth bg-primary-tealBlue font-helvetica-regular ">
+        <div className="scroll-smooth bg-primary-tealBlue font-helvetica-regular">
             <motion.section
                 style={{
                     filter: `blur(${blurValue}px)`,
@@ -84,7 +84,7 @@ const Tentang = () => {
                             duration: 0.3,
                             delay: 0.2,
                         }}
-                        className="text-3xl lg:text-6xl font-bold  h-20 "
+                        className="text-2xl lg:text-6xl font-bold  h-20 "
                     >
                         Universitas Brawijaya 2024
                     </motion.h1>

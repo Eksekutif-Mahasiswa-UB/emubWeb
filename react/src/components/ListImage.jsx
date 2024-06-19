@@ -12,7 +12,7 @@ const ListImage = ({top,bottom,listImage,index}) => {
     >
         {
             listImage.map((item,index)=>(
-                <img key={index} src={item} className="aspect-[9/14] w-full object-cover rounded-xl" loading="lazy" alt="img" />
+                <img key={index} src={item} className="aspect-[9/14] w-full object-cover rounded-xl shadow-2xl" loading="lazy" alt="img" />
             ))
         }
     </motion.div>
