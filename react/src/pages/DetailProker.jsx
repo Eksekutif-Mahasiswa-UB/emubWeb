@@ -1,6 +1,6 @@
 import{ useEffect } from "react";
-import right from "../../src/assets/ProkerEM/heroRight.png";
-import left from "../../src/assets/ProkerEM/heroLeft.png";
+import right from "../../src/assets/ProkerEM/heroRight.webp";
+import left from "../../src/assets/ProkerEM/heroLeft.webp";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useState } from "react";
 import { prokerMegaBesar } from "../data/data";

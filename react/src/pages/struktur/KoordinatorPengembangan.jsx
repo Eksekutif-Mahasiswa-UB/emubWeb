@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import right from "../../../src/assets/ProkerEM/heroRight.png";
-import left from "../../../src/assets/ProkerEM/heroLeft.png";
+import right from "../../../src/assets/ProkerEM/heroRight.webp";
+import left from "../../../src/assets/ProkerEM/heroLeft.webp";
 import { Pengembangan } from "../../data/data";
 import CardKementrian from "../../components/CardKementrian";
 import KementrianHeader from "../../components/sections/struktur/KementrianHeader";

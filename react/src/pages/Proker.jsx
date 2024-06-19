@@ -1,7 +1,7 @@
 import React from "react";
-import right from "../../src/assets/ProkerEM/heroRight.png";
-import left from "../../src/assets/ProkerEM/heroLeft.png";
-import hero from "../../src/assets/ProkerEM/heroImage.png";
+import right from "../../src/assets/ProkerEM/heroRight.webp";
+import left from "../../src/assets/ProkerEM/heroLeft.webp";
+import hero from "../../src/assets/ProkerEM/heroImage.webp";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { prokerMegaBesar } from "../data/data";
 import { Link } from "react-router-dom";

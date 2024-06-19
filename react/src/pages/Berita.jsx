@@ -1,4 +1,4 @@
-import Heder from '../assets/Berita/heroimage.png';
+import Heder from '../assets/Berita/heroimage.webp';
 import HederName from '../assets/Berita/Berita.png';
 import { useEffect, useState } from 'react';
 import Skeleton from '../components/Skeleton';

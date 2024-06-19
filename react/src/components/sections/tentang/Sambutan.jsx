@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import React, { useRef } from 'react'
-import Petinggi from "../../../assets/petinggi.png"
+import Petinggi from "../../../assets/petinggi.webp"
 import Rektorat from "../../../assets/rektorat.png";
 import KataSambutan from './KataSambutan';
 import SambutanImage from '../../../assets/sambutan.png'

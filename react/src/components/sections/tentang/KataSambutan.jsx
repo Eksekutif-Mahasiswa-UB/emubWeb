@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import  { useRef } from 'react'
-import Petinggi from "../../../assets/petinggi.png"
+import Petinggi from "../../../assets/petinggi.webp"
 import SambutanScroll from './SambutanScroll';
 
 const KataSambutan = () => {
