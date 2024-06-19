@@ -23,7 +23,7 @@ const ProkerUnggulan = () => {
   });
   return (
     <motion.section ref={targetRef} className="w-full relative overflow-hidden  flex flex-col justify-center items-center h-screen lg:h-[calc(100vh+20vh)] bg-gradient-to-t from-black via-primary-tealBlue to-black gap-5  ">
-      <h1 className="font-helvetica-extraBold text-2xl lg:text-7xl text-white bg-clip-text bg-gradient-to-r from-primary-skyBlue to-white text-balance w-4/5 text-center relative drop-shadow-2xl z-40">
+      <h1 className="font-helvetica-extraBold text-2xl lg:text-7xl text-white text-shadow bg-clip-text bg-gradient-to-r from-primary-skyBlue to-white text-balance w-4/5 text-center relative drop-shadow-2xl z-40">
         6 PROGRAM KERJA MEGA BESAR EM UB 2024
       </h1>
       <Link to={"/proker"}>

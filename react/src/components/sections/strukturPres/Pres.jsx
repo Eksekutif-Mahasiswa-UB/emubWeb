@@ -1,6 +1,8 @@
 import kiri1 from "../../../assets/Struktur/Pres/kiri1.webp";
 import fotopres from "../../../assets/Struktur/Pres/fotopres.webp";
 import kanan1 from "../../../assets/Struktur/Pres/kanan1.webp";
+import kiri4 from "../../../assets/Struktur/Pres/kiri4.webp";
+import kanan4 from "../../../assets/Struktur/Pres/kanan4.webp";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { forwardRef } from "react";
@@ -33,7 +35,7 @@ const Pres =forwardRef((props, ref) => {
         translateX:'-50%',
         opacity
       }}
-      draggable="false" alt="img" src={fotopres} className="w-1/5 absolute bottom-0 left-1/2   z-40 " />
+      draggable="false" alt="img" src={fotopres} className="w-2/5 lg:w-1/5 absolute bottom-0 left-1/2 z-40 " />
 
 
       <div className="w-1/2 relative z-30 overflow-hidden">
@@ -45,17 +47,20 @@ const Pres =forwardRef((props, ref) => {
             x:right,
             opacity
         }}
-        className="text-primary-tealBlue md:text-3xl text-xs lg:text-5xl z-40 font-helvetica font-extrabold absolute top-1/2 -translate-x-1/3 left-0">
+        className="text-primary-tealBlue md:text-3xl text-xl lg:text-5xl z-40 font-helvetica font-extrabold absolute top-1/2 -translate-x-1/3 left-0">
           FISIP<br></br>20
         </motion.h3>
         <motion.h3 
         style={{x:left,opacity}}
-        className=" text-primary-tealBlue md:text-3xl text-xs lg:text-5xl z-40 font-extrabold absolute top-0 lg:top-5 right-0">
+        className=" text-primary-tealBlue md:text-3xl text-xl lg:text-5xl z-40 font-extrabold absolute top-0 lg:top-5 right-0">
           PRES
         </motion.h3>
         <motion.img 
        
-        draggable="false" alt="img" src={kiri1} className="w-full object-contain relative z-10" />
+        draggable="false" alt="img" src={kiri1} className="hidden lg:block w-full object-contain relative z-10" />
+        <div className="block lg:hidden">
+          <img draggable="false" alt="img" src={kiri4} className="w-full h-full object-cover" />
+        </div>
       </div>
       <div className="w-1/2 relative z-30 overflow-hidden">
         <motion.div 
@@ -66,7 +71,7 @@ const Pres =forwardRef((props, ref) => {
             x:left,
             opacity
         }}
-        className="text-white text-right md:text-3xl text-xs lg:text-5xl z-40 font-helvetica font-extrabold -translate-y-1/2 absolute top-1/2 -translate-x-1/3 right-0">
+        className="text-white text-right md:text-3xl text-xl lg:text-5xl z-40 font-helvetica font-extrabold -translate-y-1/2 absolute top-1/2 -translate-x-1/3 right-0">
           <h3>SATRIA</h3>
           <h3>NAUFAL</h3>
           <h3>PUTRA</h3>
@@ -76,14 +81,20 @@ const Pres =forwardRef((props, ref) => {
         <motion.h3 
             style={{x:right,opacity}}
         
-        className="text-white md:text-3xl text-xs lg:text-5xl font-helvetica z-40 font-extrabold absolute top-0 lg:top-5  ">
+        className="text-white md:text-3xl text-xl lg:text-5xl font-helvetica z-40 font-extrabold absolute top-0 lg:top-5  ">
           IDEN
         </motion.h3>
-        <motion.img 
+        
+        <motion.img  
+       
         style={{
           
         }}
-        draggable="false" alt="img" src={kanan1} className="w-full object-contain relative z-20" />
+        draggable="false" alt="img" src={kanan1} className=" hidden lg:block w-full object-contain relative z-20" />
+        <div className="block lg:hidden">
+                        <img draggable="false" alt="img" src={kanan4} className="w-full h-full object-cover" />
+        </div>
+                    
       </div>
     </section>
   </motion.div>

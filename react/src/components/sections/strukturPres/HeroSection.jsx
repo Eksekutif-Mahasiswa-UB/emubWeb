@@ -20,7 +20,7 @@ const HeroSection = forwardRef((props, ref) =>  {
     };
   
     return (
-      <header ref={target} className="bg-white w-full h-screen flex item-center justify-center overflow-hidden">
+      <header ref={target} className="bg-white  h-1/4 lg:h-screen lg:w-full flex item-center justify-center overflow-hidden">
         {/* Struktur EM UB 24 */}
         <motion.img
           initial={{ opacity: 0 }}
@@ -30,7 +30,7 @@ const HeroSection = forwardRef((props, ref) =>  {
           draggable="false"
           alt="hero-img"
           style={{ opacity }}
-          className="w-2/5 lg:w-1/5 aspect-auto"
+          className="w-2/5 lg:w-1/5 aspect-auto my-16"
           onAnimationComplete={handleAnimationComplete}
 />
       </header>

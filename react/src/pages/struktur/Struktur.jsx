@@ -87,13 +87,13 @@ const Struktur = () => {
           data.map((item,index)=>(
         <div className="e w-full h-full  rounded shadow-xl flex justify-between py-2 lg:py-5 items-center px-4 lg:px-16">
           <h3 className="text-primary-tealBlue text-xs md:text-xl lg:text-3xl w-full lg:w-2/5 font-helvetica font-extrabold   ">
-            {item.nama1} <span className="text-black"> {item.nama2}</span>
+          {item.nama1} <h3 className="text-black"> {item.nama2}</h3>
           </h3>
-          <div className="w-2/5">
+          <div className="w-4/5 lg:w-2/5">
           <div className="w-full grid-cols-2  grid-rows-1 grid gap-1 lg:gap-5">
             {
               item.image.map((item,index)=>(
-                <img src={item} key={index} draggable="false" alt="img" className="w-full h-full aspect-auto object-cover " />
+                <img src={item} key={index} draggable="false" alt="img" className="w-full h-full aspect-auto object-cover" loading="lazy"/>
 
               ))
             }
