@@ -99,7 +99,7 @@ const FilosofiLogo = () => {
                         />
                     ))}
                 </div>
-                <div className=" w-4/5 lg:w-[30%] aspect-square relative">
+                <div className=" w-4/5 lg:w-[30%] aspect-square relative mb-16 lg:mb-0">
                     <AnimatePresence>
                         <motion.img
                             key={activeLogo.id}
