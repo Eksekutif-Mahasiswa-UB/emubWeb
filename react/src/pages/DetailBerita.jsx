@@ -12,7 +12,7 @@ import Skeleton from "../components/Skeleton";
 const DetailBerita = () => {
     const [data,setData] =useState({});
     const [another,setAnother]=useState([])
-    const[informasi,setInformasi]=useState()
+
     const [loading,setLoading] = useState(true)
     const {id}=useParams()
 
@@ -23,7 +23,7 @@ const DetailBerita = () => {
             const response = await getBeritaById(id)
             const response1 = await getAllBerita()
             setData(response.data)
-            setInformasi(response.data.informasi.replace(/\n/g, "<br />"))
+        
             setAnother(response1.data.filter(item => item.idBerita !== parseInt(id)).slice(0, 3))
             
             setLoading(false)
@@ -119,8 +119,8 @@ const DetailBerita = () => {
                                     <p className="w-fit mx-auto mt-3 text-primary-tealBlue text-xl">
                                     {data.created_at&&formatTanggal(data.created_at)}
                                     </p>
-                                    <main className="flex flex-col gap-2 lg:gap-5 px-5 lg:px-36 text-xs lg:text-base  text-primary-charcoalGray py-10" dangerouslySetInnerHTML={{ __html: informasi}}>
-                                     
+                                    <main className="flex flex-col lg:prose-lg  md:prose prose-sm gap-2 lg:gap-5 px-5 lg:px-36 text-xs lg:text-base  text-primary-charcoalGray py-10" >
+                                     {data&&data.informasi&&data.informasi}
                                     </main>
                                 </div>
 
