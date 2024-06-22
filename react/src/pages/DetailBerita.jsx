@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import { getAllBerita, getBeritaById } from "../api/services/berita";
 import { formatTanggal } from "../utils/util";
 import Skeleton from "../components/Skeleton";
+import axios from "axios";
 
 const DetailBerita = () => {
     const [data, setData] = useState({});
@@ -18,10 +19,9 @@ const DetailBerita = () => {
         window.scroll(0, 0);
         const fetchData = async () => {
             try {
-                const response = await getBeritaById(id);
-                const response1 = await getAllBerita();
+                const response = await axios.get(`https://superapart.me/api/lihatBerita/${id}`);
+                const response1 = await axios.get('https://superapart.me/api/lihatBerita');
                 setData(response.data);
-
                 setAnother(
                     response1.data
                         .filter((item) => item.idBerita !== parseInt(id))
@@ -39,23 +39,7 @@ const DetailBerita = () => {
         return setLoading(true);
     }, [id]);
 
-    const dummy = [
-        {
-            title: "Program Kegiatan Mahasiswa Berprestasi",
-            img: "https://source.unsplash.com/random/900×700/?student-achievement",
-            date: "15 Mei 2024",
-        },
-        {
-            title: "Proker Universitas Terbaik 2024",
-            img: "https://source.unsplash.com/random/900×700/?university-award",
-            date: "1 Juni 2024",
-        },
-        {
-            title: "Kompetisi Karya Ilmiah Tingkat Nasional",
-            img: "https://source.unsplash.com/random/900×700/?scientific-research",
-            date: "10 Juli 2024",
-        },
-    ];
+
 
     return (
         <div className="bg-primary-white font-helvetica-regular bg-paper">
@@ -79,7 +63,7 @@ const DetailBerita = () => {
                                     className="lg:h-[75vh] h-[25vh] "
                                 >
                                     <img
-                                        src={item}
+                                        src={`https://superapart.me/storage/app/public/${item.replace("/", "//")}`}
                                         alt={item}
                                         className="h-full w-full object-cover"
                                     />
@@ -117,8 +101,8 @@ const DetailBerita = () => {
                                             {data.created_at &&
                                                 formatTanggal(data.created_at)}
                                         </p>
-                                        <main className="flex flex-col  prose-2xl gap-2 lg:gap-5 px-5 lg:px-36 text-xs lg:text-base  text-primary-charcoalGray py-10">
-                                            {data&&data.informasi&&data.informasi}
+                                        <main  dangerouslySetInnerHTML={{__html: data.informasi}} className="flex flex-col prose-ol:list-decimal prose-a:underline prose-ul:list-disc prose-a:text-primary-tealBlue prose-xl gap-2 lg:gap-5 px-5 lg:px-36 text-xs lg:text-base  text-primary-charcoalGray py-10">
+                                    
                                     
                                         </main>
                                     </div>

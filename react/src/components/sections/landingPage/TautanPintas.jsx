@@ -5,6 +5,7 @@ import cardEffect from "../../../assets/cardTautanEffect.png";
 import { getAllTautan } from "../../../api/services/tautan";
 import Skeleton from "../../Skeleton";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const TautanPintas = () => {
   const [data, setData] = useState([]);
@@ -13,7 +14,7 @@ const TautanPintas = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await getAllTautan();
+        const response = await axios.get('https://superapart.me/api/lihatTautan');
         setData(response.data);
         setLoading(false);
       } catch (error) {

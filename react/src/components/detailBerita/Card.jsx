@@ -5,9 +5,9 @@ const Card = ({img,time,title}) => {
         <div className="w-full  text-primary-charcoalGray group">
             <div className="w-full aspect-video overflow-hidden">
                 <img
-                    src={img}
+                    src={`https://superapart.me/storage/app/public/${img.replace("/", "//")}`}
                     alt="card-img"
-                    className="aspect-video w-full object-cover group-hover:scale-110 duration-300 ease-in-out group-hover:rotate-3"
+                    className="aspect-video w-full object-cover group-hover:scale-110 duration-700 ease-in-out group-hover:rotate-3"
                     draggable="false"
                 />
             </div>

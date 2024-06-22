@@ -40,7 +40,6 @@ const deleteBerita = async (id) => {
   };
 const getAllBerita = async () => {
     try {
-      const token = localStorage.getItem("token");
   
       const response = await coreApi.get("lihatBerita", {
        
@@ -55,9 +54,7 @@ const getBeritaById = async (id ) => {
     try {
       
       const response = await coreApi.get(`lihatBerita/${id}`, {
-        headers: {
-          "Content-Type": "application/json", 
-        },
+      
       });
       return response
     } catch (error) {

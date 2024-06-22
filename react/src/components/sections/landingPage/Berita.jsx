@@ -5,6 +5,7 @@ import Quotes from "../../../assets/LandingPage/quotes.png";
 import { getAllBerita } from "../../../api/services/berita";
 import Skeleton from "../../Skeleton";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Berita = () => {
     const [data, setData] = useState([]);
@@ -13,7 +14,9 @@ const Berita = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await getAllBerita();
+                const response = await axios.get(
+                    "https://superapart.me/api/lihatBerita"
+                );
                 console.log(response.data);
                 setData(response.data);
                 setLoading(false);
@@ -82,8 +85,6 @@ const Berita = () => {
                                 perPage: 1,
                             },
                         },
-                 
-                        
                     }}
                 >
                     {loading ? (
@@ -129,9 +130,16 @@ const Berita = () => {
                                     <div className="w-full aspect-video overflow-hidden">
                                         {item.gambar &&
                                         item.gambar.length > 0 ? (
-                                            <Splide 
+                                            <Splide
                                                 options={{
-                                                    arrows:false
+                                                    arrows: false,
+                                                    autoplay: true, 
+                                                    interval: 3000, 
+                                                    pauseOnHover: false, 
+                                                    pauseOnFocus: false, 
+                                                    resetProgress: false, 
+                                                    loop:true,
+                                                    rewind:true
                                                 }}
                                             >
                                                 {item.gambar.map(
@@ -140,8 +148,11 @@ const Berita = () => {
                                                             key={imgIndex}
                                                         >
                                                             <img
-                                                                src={url}
-                                                                className="w-full aspect-video object-cover group-hover:scale-105  duration-1000 ease-in-out"
+                                                                src={`https://superapart.me/storage/app/public/${url.replace(
+                                                                    "/",
+                                                                    "//"
+                                                                )}`}
+                                                                className="w-full aspect-video object-cover group-hover:rotate-1 group-hover:scale-[101%]   duration-700 ease-in-out"
                                                                 alt=""
                                                             />
                                                         </SplideSlide>
@@ -163,9 +174,12 @@ const Berita = () => {
                                             <h1 className="lg:mt-3 mt-1 text-sm sm:text-lg lg:text-2xl font-bold h-fit lg:h-16 line-clamp-2">
                                                 {item.judul}
                                             </h1>
-                                            <p className="text-xs h-fit mt-1 lg:mt-3 line-clamp-3 lg:line-clamp-4">
-                                                {item.informasi}
-                                            </p>
+                                            <p
+                                                className="text-xs prose-2xl  h-fit mt-1 lg:mt-3 line-clamp-3 lg:line-clamp-4"
+                                                dangerouslySetInnerHTML={{
+                                                    __html: item.informasi,
+                                                }}
+                                            ></p>
                                         </div>
                                         <Link to={`/berita/${item.idBerita}`}>
                                             <button className="w-4/6 absolute left-1/2 bottom-3 lg:bottom-5 text-xs lg:text-base -translate-x-1/2 mx-auto rounded py-1 lg:py-2 bg-primary-charcoalGray text-slate-100 active:scale-95 duration-300 ease-in-out ">

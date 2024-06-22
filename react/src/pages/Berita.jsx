@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Skeleton from '../components/Skeleton';
 import { getAllBerita } from '../api/services/berita';
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 
 const Berita = () => {
@@ -13,7 +14,7 @@ const Berita = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await getAllBerita();
+          const response = await axios.get('https://superapart.me/api/lihatBerita');
           console.log(response.data)
           setData(response.data);
           setLoading(false);
@@ -23,6 +24,8 @@ const Berita = () => {
         }
       };
       fetchData();
+
+      console.log(data.gambar)
 
     }, []);
 
@@ -86,13 +89,13 @@ const Berita = () => {
                         <h1 className='w-full text-base md:text-xl lg:text-2xl font-semibold line-clamp-2'>
                         {item.judul}
                         </h1>
-                        <p className='line-clamp-5 lg:text-base text-xs'>{item.informasi}</p>
+                        <article dangerouslySetInnerHTML={{__html: item.informasi}} className='line-clamp-5 prose-sm  lg:text-base text-xs'></article>
                         <Link to={`/berita/${item.idBerita}`}>
                         <button className='absolute bottom-3 active:scale-95 duration-200 ease-in-out left-1/2 -translate-x-1/2 bg-primary-charcoalGray px-2 py-1 rounded  text-primary-white lg:text-base  text-xs'>Baca Selengkapnya</button>
                         </Link>
                       </div>
                       <div className='w-1/4 h-full bg-black'>
-                        <img src={item.gambar[0]} alt="card-img" draggable="false" className='w-full h-full object-cover ' />
+                        <img src={`https://superapart.me/storage/app/public/${item.gambar[0].replace("/", "//")}`} alt="card-img" draggable="false" className='w-full h-full object-cover ' />
                       </div>
             
                     </div>
