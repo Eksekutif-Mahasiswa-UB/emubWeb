@@ -658,7 +658,7 @@ export const PPM = [
                 image: PPM_BPI_1,
             },
             {
-                nama: "Mohammad Tito Ferdiansyah",
+                nama: "Arjuna Nayasilana",
                 jabatan:
                     "Sekretaris Kementerian Koordinator Pengabdian dan Pemberdayaan Masyarakat",
                 image: PPM_BPI_2,
