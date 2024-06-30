@@ -1,17 +1,17 @@
 // 6 PROKER MEGA BESAR
-import image1_1 from "../assets/ProkerEM/6ProkerMegaBesar/1.1.jpg";
-import image1_2 from "../assets/ProkerEM/6ProkerMegaBesar/1.2.jpg";
-import image1_3 from "../assets/ProkerEM/6ProkerMegaBesar/1.3.jpg";
-import image2_1 from "../assets/ProkerEM/6ProkerMegaBesar/2.1.jpg";
-import image2_2 from "../assets/ProkerEM/6ProkerMegaBesar/2.2.jpg";
-import image2_3 from "../assets/ProkerEM/6ProkerMegaBesar/2.3.jpg";
-import image3_1 from "../assets/ProkerEM/6ProkerMegaBesar/3.1.jpg";
-import image3_2 from "../assets/ProkerEM/6ProkerMegaBesar/3.2.jpg";
-import image3_3 from "../assets/ProkerEM/6ProkerMegaBesar/3.3.jpg";
-import image4_1 from "../assets/ProkerEM/6ProkerMegaBesar/4.1.jpeg";
-import image4_2 from "../assets/ProkerEM/6ProkerMegaBesar/4.2.jpeg";
-import image4_3 from "../assets/ProkerEM/6ProkerMegaBesar/4.3.jpeg";
-import image4_4 from "../assets/ProkerEM/6ProkerMegaBesar/4.4.jpeg";
+import image1_1 from "../assets/ProkerEM/6ProkerMegaBesar/1.1.webp";
+import image1_2 from "../assets/ProkerEM/6ProkerMegaBesar/1.2.webp";
+import image1_3 from "../assets/ProkerEM/6ProkerMegaBesar/1.3.webp";
+import image2_1 from "../assets/ProkerEM/6ProkerMegaBesar/2.1.webp";
+import image2_2 from "../assets/ProkerEM/6ProkerMegaBesar/2.2.webp";
+import image2_3 from "../assets/ProkerEM/6ProkerMegaBesar/2.3.webp";
+import image3_1 from "../assets/ProkerEM/6ProkerMegaBesar/3.1.webp";
+import image3_2 from "../assets/ProkerEM/6ProkerMegaBesar/3.2.webp";
+import image3_3 from "../assets/ProkerEM/6ProkerMegaBesar/3.3.webp";
+import image4_1 from "../assets/ProkerEM/6ProkerMegaBesar/4.1.webp";
+import image4_2 from "../assets/ProkerEM/6ProkerMegaBesar/4.2.webp";
+import image4_3 from "../assets/ProkerEM/6ProkerMegaBesar/4.3.webp";
+import image4_4 from "../assets/ProkerEM/6ProkerMegaBesar/4.4.webp";
 // 6 PROKER MEGA BESAR
 
 // SPI
