@@ -62,7 +62,7 @@ const Footer = () => {
             <section className="lg:text-base text-[0.625rem] text-center lg:text-start container pt-1 lg:pt-3">
                 
                 ©️ 2024 EKSEKUTIF MAHASISWA UNIVERSITAS BRAWIJAYA | Made with ♡
-                by KOMINFO
+                by KOMINFO EM UB 2024
             </section>
             </div>
            
