@@ -407,7 +407,7 @@ export const Pengembangan = [
                         image: BUMM_BPH_1,
                     },
                     {
-                        nama: "Chesira Amanda Abidin",
+                        nama: "Mohammad K. Hatta Adiatha",
                         jabatan: "Wakil Menteri Badan Usaha Milik Mahasiswa",
                         image: BUMM_BPH_2,
                     },
